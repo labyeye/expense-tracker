@@ -1,7 +1,6 @@
 import React from "react";
 import { Text,View,TextInput, StyleSheet, TouchableOpacity } from "react-native";
-
-const Login = () => {
+const Login = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.detailbox}>
@@ -15,6 +14,11 @@ const Login = () => {
                 <View>
                     <TouchableOpacity style={styles.loginbtn}>
                         <Text style={styles.logintxt}>Login</Text>
+                    </TouchableOpacity>
+                </View>
+                <View>
+                    <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+                        <Text style={styles.logtxt}>Don't have account? Register Here</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -70,6 +74,10 @@ const styles= StyleSheet.create({
         backgroundColor: 'white',
     },
     logintxt:{
+        color: 'black',
+    },
+    logtxt:{
+        marginTop:10,
         color: 'black',
     }
 })
