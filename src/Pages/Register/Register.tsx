@@ -1,7 +1,7 @@
 import React from "react";
 import { Text,View,TextInput, StyleSheet, TouchableOpacity } from "react-native";
 
-const Register = () => {
+const Register = ({navigation}) => {
     return(
         <View style={styles.container}>
             <View style={styles.detailbox}>
@@ -20,7 +20,7 @@ const Register = () => {
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                         <Text style={styles.regtxt}>Already have a Account? Login Here</Text>
                     </TouchableOpacity>
                 </View>
